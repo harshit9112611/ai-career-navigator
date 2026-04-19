@@ -16,6 +16,7 @@ interface CareerContextType {
   setLoading: (loading: boolean) => void;
   setError: (error: string | null) => void;
   generateCareer: () => Promise<void>;
+  reset: () => void;
   // New features for Dashboard
   savedCareers: CareerMatch[];
   streak: number;
