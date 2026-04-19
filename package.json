@@ -1,5 +1,6 @@
 {
   "name": "ai-career-navigator",
+  "//": "Trigger fresh Vercel deployment to fix root 404 issue - Deployment verified",
   "version": "0.1.0",
   "private": true,
   "scripts": {
