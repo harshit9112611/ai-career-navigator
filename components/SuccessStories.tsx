@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import Link from "next/link";
 
 const STORIES = [
   {
@@ -71,11 +72,22 @@ export function SuccessStories() {
               </div>
               
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed relative z-10 italic">
-                "{story.quote}"
+                &quot;{story.quote}&quot;
               </p>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <Link href="/community" className="btn-secondary inline-flex items-center gap-2">
+            See All Success Stories
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -56,6 +56,19 @@ function MatchRing({ percentage }: { percentage: number }) {
   );
 }
 
+import Link from "next/link";
+
+function slugify(text: string) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
 function CareerCard({
   career,
   index,
@@ -159,6 +172,16 @@ function CareerCard({
                   </p>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-6 pt-4 border-t border-[var(--border-subtle)]">
+              <Link 
+                href={`/roadmap/${slugify(career.title)}`}
+                className="w-full btn-secondary py-2 flex items-center justify-center gap-2"
+              >
+                View Detailed Learning Roadmap
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
