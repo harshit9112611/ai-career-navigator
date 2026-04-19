@@ -56,7 +56,6 @@ function MatchRing({ percentage }: { percentage: number }) {
   );
 }
 
-import Link from "next/link";
 
 function slugify(text: string) {
   return text
